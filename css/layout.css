@@ -1,0 +1,304 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  padding: 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 100px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 127px;
+  height: 24px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.auth a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: block;
+}
+
+.menu-icon img {
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+}
+
+/* 메인 비주얼 */
+.main-visual {
+  height: 700px;
+  background: url("../img/header.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+  padding: 0 60px;
+  padding-top: 80px;
+}
+.main_con {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.visual-text {
+  text-align: left;
+  max-width: 600px;
+}
+.visual-text h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.visual-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+
+.discount {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.original {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.sale {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* 두번째 섹션 */
+.package-section {
+  position: relative;
+  margin: 100px auto;
+  padding: 0 60px;
+  max-width: 1520px;
+  margin-bottom: 200px;
+}
+
+.package-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1c3f74;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.package-sub {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.package-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #323232;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card img {
+  width: 400px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.package-card .tag {
+  font-size: 13px;
+  color: #b1b1b1;
+  margin-bottom: 4px;
+}
+
+.package-card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.price-info {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 14px;
+}
+
+.price-info .discount {
+  color: #40a3ff;
+  font-weight: bold;
+}
+
+.price-info .original {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.price-info .sale {
+  font-weight: bold;
+  color: #40a3ff;
+}
+
+.arrow {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  color: #535353;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow-left {
+  left: -100px;
+}
+.arrow-right {
+  right: -100px;
+}
+
+/* 세번째 섹션 */
+.coupon-section {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1520px;
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.coupon-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1c3f74;
+  margin-bottom: 10px;
+}
+
+.coupon-sub {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-bottom: 100px;
+}
+
+.coupon-sec {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.coupon-sec img {
+  width: 513px;
+  height: 404px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #323232;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.coupon-sec img:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
