@@ -24,7 +24,7 @@ header {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -59,10 +59,17 @@ header {
   font-size: 18px;
 }
 
+.main-nav a:hover {
+  color: #4a4a4a;
+}
 .auth a {
   color: white;
   font-size: 15px;
   text-decoration: none;
+}
+
+.auth a:hover {
+  color: #4a4a4a;
 }
 
 .menu-icon {
@@ -254,6 +261,35 @@ header {
 }
 .arrow-right {
   right: -100px;
+}
+/* 북마크 */
+.package-card .img-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.package-card .img-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background: none;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 10;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.bookmark-icon:hover {
+  transform: scale(1.2);
+  background: none;
 }
 
 /* 세번째 섹션 */
@@ -466,8 +502,8 @@ header {
   padding: 20px;
   transition: transform 0.3s;
   cursor: pointer;
-  height: 200px;
-  margin-bottom: 200px;
+  height: auto;
+  margin-bottom: 100px;
 }
 
 .aipackage-card img {
@@ -483,10 +519,23 @@ header {
 .aipackage-card > h3 {
   font-size: 16px;
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .aipackage-card:hover {
   transform: translateY(-5px);
+}
+
+/* 북마크 영역 */
+.aipackage-card .img-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.package-card .img-wrapper img {
+  width: 100%;
+  display: block;
 }
 
 /* 상품 더보기 버튼 */
@@ -496,8 +545,130 @@ header {
   border: 1px solid #e3e3e3;
   border-radius: 25px;
   background-color: #fff;
+  margin-bottom: 200px;
 }
 .package-btn a {
   text-decoration: none;
   color: #323232;
+}
+
+/* 리뷰영역 */
+.review-section {
+  text-align: center;
+  padding: 100px 60px;
+  background-color: #fff;
+}
+
+.review-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.trip-review {
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f9f9f9;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.trip-review img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.review-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.review-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+.review-info > p {
+  color: #d2d2d2;
+  font-size: 15px;
+}
+
+.trip-review:hover {
+  transform: translateY(-5px);
+}
+
+/* 푸터영역 */
+
+.site-footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 50px 60px;
+  font-size: 14px;
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer-left small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
 }

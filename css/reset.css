@@ -139,3 +139,6 @@ input,
 textarea {
   outline: none;
 }
+i {
+  text-decoration: none;
+}
